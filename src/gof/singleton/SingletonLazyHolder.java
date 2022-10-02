@@ -1,0 +1,21 @@
+package gof.singleton;
+
+/**
+ *  Singleton "Lazy Holder" 
+ *  
+ *  @author caio303
+ */
+public class SingletonLazyHolder {
+
+	private static class Holder {
+		public static SingletonLazyHolder instance = new SingletonLazyHolder();
+	}
+	
+	private SingletonLazyHolder() {
+		super();
+	}
+	
+	public static SingletonLazyHolder getInstance() {
+		return Holder.instance;
+	}
+}
